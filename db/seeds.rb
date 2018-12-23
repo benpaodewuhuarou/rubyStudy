@@ -29,7 +29,7 @@ puts '5 skills created'
 		title:"Portfolio title #{por}",
 		subtitle:"My great service",
 		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
-		main_image:"http://placehold.it/600*400",
-		thumb_image:"http://placehold.it/350*200"
+		main_image:"http://placehold.it/500",
+		thumb_image:"http://placehold.it/150"
 	)
 end
