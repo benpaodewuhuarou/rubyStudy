@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |blog|
+	Blog.create!(
+		title:"My Blog Post #{blog}",
+		body:'sdfjahsjdfnald sdkfja  dfaldsj dhfjad hlah l asjdfha lh hfaushdfauh  sfdhauldh '
+		)
+end
+
+puts '10 blog posts created'
+
+5.times do |skill|
+	Skill.create!(
+			title:"My skill #{skill}",
+			percent_utilized: 14
+		)
+end
+
+puts '5 skills created'
+
+
+9.times do |por|
+	Porfolio.create!(
+		title:"Portfolio title #{por}",
+		subtitle:"My great service",
+		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
+		main_image:"http://placehold.it/500",
+		thumb_image:"http://placehold.it/150"
+	)
+end
