@@ -5,11 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+3.times do |topic|
+	Topic.create!(
+		title:"Topic #{topic}"
+		)
+	end
+
+	puts '3 topics'
 10.times do |blog|
 	Blog.create!(
 		title:"My Blog Post #{blog}",
-		body:'sdfjahsjdfnald sdkfja  dfaldsj dhfjad hlah l asjdfha lh hfaushdfauh  sfdhauldh '
-		)
+		body:'sdfjahsjdfnald sdkfja  dfaldsj dhfjad hlah l asjdfha lh hfaushdfauh  sfdhauldh ',
+		topic_id:Topic.last.id)
 end
 
 puts '10 blog posts created'
@@ -24,10 +32,19 @@ end
 puts '5 skills created'
 
 
-9.times do |por|
+8.times do |por|
 	Porfolio.create!(
 		title:"Portfolio title #{por}",
-		subtitle:"My great service",
+		subtitle:"Ruby on rails",
+		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
+		main_image:"http://placehold.it/500",
+		thumb_image:"http://placehold.it/150"
+	)
+end
+1.times do |por|
+	Porfolio.create!(
+		title:"Portfolio title #{por}",
+		subtitle:"angular",
 		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
 		main_image:"http://placehold.it/500",
 		thumb_image:"http://placehold.it/150"
