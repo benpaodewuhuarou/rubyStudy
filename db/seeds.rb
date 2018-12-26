@@ -50,3 +50,11 @@ end
 		thumb_image:"http://placehold.it/150"
 	)
 end
+
+3.times do |technology|
+	Technology.create!(
+			name:'Technology #{technology}',
+			porfolio_id:Porfolio.last.id
+		)
+end
+puts "3 technologies created"
