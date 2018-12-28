@@ -1,6 +1,6 @@
 class PorfoliosController < ApplicationController
 	def index
-		@portfolio_items = Porfolio.all
+		@portfolio_items = Porfolio.all 
 	end
 
   def angular
@@ -17,7 +17,7 @@ class PorfoliosController < ApplicationController
 	end
 
 	def create
-    	@portfolio_item = Porfolio.new(params.require(:porfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    	@portfolio_item = Porfolio.new(por_params)
 
     	respond_to do |format|
       	if @portfolio_item.save
@@ -36,7 +36,7 @@ class PorfoliosController < ApplicationController
    		@portfolio_item = Porfolio.find(params[:id])
 
     	respond_to do |format|
-      	if @portfolio_item.update(params.require(:porfolio).permit(:title, :subtitle, :body))
+      	if @portfolio_item.update(por_params)
         	format.html { redirect_to porfolios_path, notice: 'porfolio was successfully updated.' }
         
       	else
@@ -56,4 +56,8 @@ class PorfoliosController < ApplicationController
       		format.html { redirect_to porfolios_url, notice: 'porfolio was successfully destroyed.' }
     	end
   	end
+    private
+      def por_params
+        params.require(:porfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+      end
 end
