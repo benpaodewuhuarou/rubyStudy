@@ -8,4 +8,13 @@ module ApplicationHelper
         end 
       end
 
+    def source_helper(kk)
+    	if session[:source]
+    		content_tag(:p,'Thanks for visiting me from #{session[:source]}',class:"source-greeting")
+
+    	end
+    	a = '44'
+    	content_tag(:p,"Thanks for visiting me from #{kk}",class:"source-greeting")
+    end
+
 end
