@@ -1,4 +1,5 @@
 class PorfoliosController < ApplicationController
+  layout "porfolio"
 	def index
 		@portfolio_items = Porfolio.all 
 	end
@@ -30,11 +31,12 @@ class PorfoliosController < ApplicationController
 
 	def edit
 	    @portfolio_item = Porfolio.find(params[:id])
+      3.times{@portfolio_item.technologies.build}
 	end
 
    	def update
    		@portfolio_item = Porfolio.find(params[:id])
-
+      
     	respond_to do |format|
       	if @portfolio_item.update(por_params)
         	format.html { redirect_to porfolios_path, notice: 'porfolio was successfully updated.' }
