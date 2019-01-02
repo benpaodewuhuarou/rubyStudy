@@ -1,11 +1,11 @@
 module ApplicationHelper
-	def login_helper
+	def login_helper style=' '
 	    if current_user.is_a?(GuestUser) 
-        (link_to 'login',new_user_session_path, class: 'nav-link')+
-          (link_to 'register', new_user_registration_path, class: 'nav-link' )
+        (link_to 'login',new_user_session_path, class: style)+
+          (link_to 'register', new_user_registration_path, class: style )
         else 
          
-          link_to 'logout', destroy_user_session_path, class: 'nav-link', method: :delete 
+          link_to 'logout', destroy_user_session_path, class: style, method: :delete 
         end 
       end
 
