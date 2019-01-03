@@ -38,7 +38,7 @@ puts '5 skills created'
 		subtitle:"Ruby on rails",
 		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
 		main_image:"http://placehold.it/500",
-		thumb_image:"http://placehold.it/150"
+		thumb_image:"http://placehold.it/300"
 	)
 end
 1.times do |por|
@@ -47,7 +47,7 @@ end
 		subtitle:"angular",
 		body: "skfjalks a sdlfkaj ajdsfl aj f jaslfalsdjfakjd l ad fadhf a fhaldjhfla d dfhaldjsfhal af alsdhf  ldsf al f aslf al fhal ",
 		main_image:"http://placehold.it/500",
-		thumb_image:"http://placehold.it/150"
+		thumb_image:"http://placehold.it/300"
 	)
 end
 
