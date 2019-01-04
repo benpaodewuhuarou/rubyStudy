@@ -8,6 +8,9 @@ class Porfolio < ApplicationRecord
 	def self.angular
 		where(subtitle:'angular')
 	end
+	def self.by_position
+		order('position ASC')
+	end
 
 	scope :ruby_on_rails, ->{where(subtitle:'Ruby on rails')}
 

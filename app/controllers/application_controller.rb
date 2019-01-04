@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
 	include CurrentUserConcern
 	include DefaultPageContent
 	before_action :set_copyright
-
+	def self.by_position
+		oder('position ASC')
+	end
 	def set_copyright
 		@copyright = DevcamoViewTool::Renderer.copyright 'zhiyang wang', 
 		'All rights reserved'
