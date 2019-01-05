@@ -106,17 +106,21 @@ body {
  */
 
  .card-block{
+ background-color:rgba(255,255,255, 0.4);
   color:black
  }
  .auth-links a{
   color:black;
  }
-
+.register-card{
+  background-color:rgba(255,255,255, 0.4);
+}
 .register-text {
   text-align: right;
   color:black
 }
 .login > .card {
+background-color:rgba(255,255,255, 0.4);
   width: 22rem;
   margin: 0 auto;
   float: none;
@@ -138,7 +142,7 @@ body {
   color:black;
   width:50%;
   height:15em;
-  background-color:rgba(255,255,255, 0.4);;
+  background-color:rgba(255,255,255, 0.4);
   margin:auto;
   text-align:center;
   border-radius:20px;
